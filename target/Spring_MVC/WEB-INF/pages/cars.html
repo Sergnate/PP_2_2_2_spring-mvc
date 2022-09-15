@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CARS</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Cars List</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="an, iterStat : ${cars}"
+        th:style="'font-weight: bold;'">
+        <td th:text="${iterStat.index}+1"></td>
+        <td th:text="${an.toString()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
